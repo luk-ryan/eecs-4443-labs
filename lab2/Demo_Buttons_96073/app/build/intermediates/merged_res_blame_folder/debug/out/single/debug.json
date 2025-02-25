@@ -16,32 +16,36 @@
         "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/drawable-mdpi/backspace_normal.png"
     },
     {
-        "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/mipmap-hdpi/ic_launcher_foreground.png"
-    },
-    {
         "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
         "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/drawable-ldpi_smileyface_pressed.png.flat",
         "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/drawable-ldpi/smileyface_pressed.png"
     },
     {
+        "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/drawable-mdpi_bs_normal.png.flat",
+        "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/drawable-mdpi/bs_normal.png"
+    },
+    {
         "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/drawable-mdpi_backspace_focused.png.flat",
         "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/drawable-mdpi/backspace_focused.png"
     },
     {
-        "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/drawable-mdpi_bs_normal.png.flat",
-        "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/drawable-mdpi/bs_normal.png"
+        "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/mipmap-xhdpi_icon.png.flat",
+        "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/mipmap-xhdpi/icon.png"
     },
     {
         "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/drawable-mdpi_backspace_pressed.png.flat",
         "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/drawable-mdpi/backspace_pressed.png"
     },
     {
-        "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/mipmap-xhdpi_icon.png.flat",
-        "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/mipmap-xhdpi/icon.png"
+        "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/layout-land_main.xml.flat",
+        "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/layout-land/main.xml"
     },
     {
         "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/drawable-ldpi_smileyface_focused.png.flat",
@@ -208,10 +212,6 @@
         "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/mipmap-xxxhdpi/icon_round.png"
     },
     {
-        "merged": "ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/layout_main.xml.flat",
-        "source": "ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/layout/main.xml"
-    },
-    {
         "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/layout_main.xml.flat",
         "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/layout/main.xml"
     },
@@ -250,6 +250,10 @@
     {
         "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/mipmap-xxhdpi_icon_round.png.flat",
         "source": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/mipmap-xxhdpi/icon_round.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/layout-land_main.xml.flat",
+        "source": "ca.yorku.eecs.mack.demobuttons_96073.app-main-7:/layout-land/main.xml"
     },
     {
         "merged": "/home/ryan-luk/.gradle/daemon/8.9/ca.yorku.eecs.mack.demobuttons_96073.app-merged_res-5:/drawable-hdpi_backspace_normal.png.flat",
