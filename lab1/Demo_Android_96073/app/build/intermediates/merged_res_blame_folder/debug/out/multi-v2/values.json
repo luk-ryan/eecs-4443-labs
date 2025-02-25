@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "ca.yorku.eecs.mack.demoandroid_96073.app-mergeDebugResources-2:/values/values.xml",
+            "map": [
+                {
+                    "source": "/home/ryan-luk/IdeaProjects/UniversityProjects/EECS_4443/Demo_Android_96073/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "7,3,5,8,4,2,6",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "317,124,221,373,168,55,277",
+                        "endColumns": "55,43,47,37,47,68,39",
+                        "endOffsets": "368,163,264,406,211,119,312"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "112,168,212,260,298,346,415",
+                        "endColumns": "55,43,47,37,47,68,39",
+                        "endOffsets": "163,207,255,293,341,410,450"
+                    }
+                },
+                {
+                    "source": "/home/ryan-luk/IdeaProjects/UniversityProjects/EECS_4443/Demo_Android_96073/app/src/main/res/values/ic_launcher_background.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "56",
+                        "endOffsets": "109"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    }
+                }
+            ]
+        }
+    ]
+}

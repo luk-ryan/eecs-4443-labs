@@ -1,0 +1,8 @@
+ca.yorku.eecs.mack.demobuttons.app-pngs-0 /home/ryan-luk/IdeaProjects/UniversityProjects/EECS_4443/lab2/Demo_Buttons/app/build/generated/res/pngs/debug
+ca.yorku.eecs.mack.demobuttons.app-resValues-1 /home/ryan-luk/IdeaProjects/UniversityProjects/EECS_4443/lab2/Demo_Buttons/app/build/generated/res/resValues/debug
+ca.yorku.eecs.mack.demobuttons.app-rs-2 /home/ryan-luk/IdeaProjects/UniversityProjects/EECS_4443/lab2/Demo_Buttons/app/build/generated/res/rs/debug
+ca.yorku.eecs.mack.demobuttons.app-mergeDebugResources-3 /home/ryan-luk/IdeaProjects/UniversityProjects/EECS_4443/lab2/Demo_Buttons/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir
+ca.yorku.eecs.mack.demobuttons.app-mergeDebugResources-4 /home/ryan-luk/IdeaProjects/UniversityProjects/EECS_4443/lab2/Demo_Buttons/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+ca.yorku.eecs.mack.demobuttons.app-merged_res-5 /home/ryan-luk/IdeaProjects/UniversityProjects/EECS_4443/lab2/Demo_Buttons/app/build/intermediates/merged_res/debug
+ca.yorku.eecs.mack.demobuttons.app-debug-6 /home/ryan-luk/IdeaProjects/UniversityProjects/EECS_4443/lab2/Demo_Buttons/app/src/debug/res
+ca.yorku.eecs.mack.demobuttons.app-main-7 /home/ryan-luk/IdeaProjects/UniversityProjects/EECS_4443/lab2/Demo_Buttons/app/src/main/res

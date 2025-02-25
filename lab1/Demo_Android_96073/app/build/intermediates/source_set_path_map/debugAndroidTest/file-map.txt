@@ -1,0 +1,4 @@
+ca.yorku.eecs.mack.demoandroid.test.app-androidTest-0 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\Demo_Android\app\build\generated\res\resValues\androidTest\debug
+ca.yorku.eecs.mack.demoandroid.test.app-mergeDebugAndroidTestResources-1 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\Demo_Android\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+ca.yorku.eecs.mack.demoandroid.test.app-mergeDebugAndroidTestResources-2 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\Demo_Android\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+ca.yorku.eecs.mack.demoandroid.test.app-merged_res-3 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\Demo_Android\app\build\intermediates\merged_res\debugAndroidTest
