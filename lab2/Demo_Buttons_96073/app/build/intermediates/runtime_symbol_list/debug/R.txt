@@ -22,6 +22,7 @@ int id radiobutton3 0x7f030008
 int id radiobuttonclickstatus 0x7f030009
 int id resetbutton 0x7f03000a
 int id tableLayout1 0x7f03000b
+int id tableLayout2 0x7f030014
 int id tableRow1 0x7f03000c
 int id tableRow2 0x7f03000d
 int id tableRow3 0x7f03000e
