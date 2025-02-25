@@ -155,4 +155,47 @@ public class DemoButtons_96073Activity extends Activity {
             resetButton.invalidate();
         }
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        // Save current UI states
+        outState.putString("buttonClickString", buttonClickString);
+        outState.putString("backspaceString", backspaceString);
+        outState.putBoolean("checkStatus", cb.isChecked());
+        outState.putBoolean("rb1Status", rb1.isChecked());
+        outState.putBoolean("rb2Status", rb2.isChecked());
+        outState.putBoolean("rb3Status", rb3.isChecked());
+        outState.putBoolean("tbStatus", tb.isChecked());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        // Restore state variables
+        buttonClickString = savedInstanceState.getString("buttonClickString", "");
+        backspaceString = savedInstanceState.getString("backspaceString", "");
+        checkStatus = savedInstanceState.getBoolean("checkStatus", false);
+        rb1Status = savedInstanceState.getBoolean("rb1Status", true);
+        rb2Status = savedInstanceState.getBoolean("rb2Status", false);
+        rb3Status = savedInstanceState.getBoolean("rb3Status", false);
+        tbStatus = savedInstanceState.getBoolean("tbStatus", false);
+
+        // Restore UI elements
+        buttonClickStatus.setText(buttonClickString);
+        backspaceButtonClickStatus.setText(backspaceString);
+        checkBoxClickStatus.setText(checkStatus ? R.string.checked : R.string.unchecked);
+        radioButtonClickStatus.setText(rb1Status ? R.string.red : rb2Status ? R.string.green : R.string.blue);
+        radioButtonClickStatus.setTextColor(rb1Status ? Color.RED : rb2Status ? Color.GREEN : Color.BLUE);
+        toggleButtonClickStatus.setText(tbStatus ? R.string.on : R.string.off);
+
+        // Restore states
+        cb.setChecked(checkStatus);
+        rb1.setChecked(rb1Status);
+        rb2.setChecked(rb2Status);
+        rb3.setChecked(rb3Status);
+        tb.setChecked(tbStatus);
+    }
 }
