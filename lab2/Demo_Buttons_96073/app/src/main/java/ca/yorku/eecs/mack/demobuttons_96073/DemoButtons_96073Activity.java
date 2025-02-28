@@ -20,6 +20,21 @@ import android.widget.ToggleButton;
  * Student ID - 218096073
  * Last name - Luk
  * First name(s) - Ryan
+ *
+ * Login ID - dustintc
+ * Student ID - 218321653
+ * Last name - Chan
+ * First name(s) - Dustin
+ *
+ * Login ID - elfnronm
+ * Student ID - 219285287
+ * Last name - Onem
+ * First name(s) - Elif
+ *
+ * Login ID - masoomar
+ * Student ID - 219041193
+ * Last name - Rizvi
+ * First name(s) - Masooma
  */
 @SuppressWarnings("unused")
 public class DemoButtons_96073Activity extends Activity {
