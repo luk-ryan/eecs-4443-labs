@@ -6,6 +6,7 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.os.CountDownTimer;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
@@ -44,6 +45,9 @@ public class PaintPanel extends View
     private float flingVelocity;
     private float flingAngle;
 
+    // For double-tap scaling
+    private boolean doubleTap = false;
+
     // Provide three constructors to correspond to each of the three in View
     public PaintPanel(Context context, AttributeSet attrs, int defStyle)
     {
@@ -66,7 +70,7 @@ public class PaintPanel extends View
     private void initialize(Context context)
     {
         this.setBackgroundColor(0xffffafb0); // AARRGGBB: opacity, red, green, blue
-        targetImage = context.getResources().getDrawable(R.drawable.varihall);
+        targetImage = context.getResources().getDrawable(R.drawable.berg); // Step 1: New Image
         imageIntrinsicWidth = targetImage.getIntrinsicWidth();
         imageIntrinsicHeight = targetImage.getIntrinsicHeight();
         targetImage.setBounds(0, 0, imageIntrinsicWidth, imageIntrinsicHeight);
@@ -338,6 +342,32 @@ public class PaintPanel extends View
         {
             // no implementation (handle in onTouchEvent)
             return false;
+        }
+
+        @Override
+        public boolean onDoubleTap(MotionEvent e)
+        {
+            // Scale the image up or down by a factor of 3 based on the current scale
+            doubleTap = !doubleTap;
+
+            // Get the focus point of the double tap
+            float focusX = e.getX();
+            float focusY = e.getY();
+
+            if (doubleTap)
+            {
+                scaleFactor *= 3;
+            }
+            else
+            {
+                scaleFactor /= 3;
+            }
+
+            // Ensure the scaling is centered on the double-tap point
+            xPosition = focusX - (focusX - xPosition) * 3;
+            yPosition = focusY - (focusY - yPosition) * 3;
+            invalidate();
+            return true;
         }
 
         /*
