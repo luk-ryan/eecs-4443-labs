@@ -1,0 +1,4 @@
+ca.yorku.eecs.mack.demoscale.test.app-androidTest-0 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab3\Demo_Scale_96073\app\build\generated\res\resValues\androidTest\debug
+ca.yorku.eecs.mack.demoscale.test.app-mergeDebugAndroidTestResources-1 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab3\Demo_Scale_96073\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+ca.yorku.eecs.mack.demoscale.test.app-mergeDebugAndroidTestResources-2 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab3\Demo_Scale_96073\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+ca.yorku.eecs.mack.demoscale.test.app-debugAndroidTest-3 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab3\Demo_Scale_96073\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

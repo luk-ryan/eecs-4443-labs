@@ -1,0 +1,8 @@
+ca.yorku.eecs.mack.demomultitouch.app-pngs-0 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\EECS4443-Demos-main\Demo_Multitouch\app\build\generated\res\pngs\debug
+ca.yorku.eecs.mack.demomultitouch.app-resValues-1 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\EECS4443-Demos-main\Demo_Multitouch\app\build\generated\res\resValues\debug
+ca.yorku.eecs.mack.demomultitouch.app-rs-2 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\EECS4443-Demos-main\Demo_Multitouch\app\build\generated\res\rs\debug
+ca.yorku.eecs.mack.demomultitouch.app-mergeDebugResources-3 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\EECS4443-Demos-main\Demo_Multitouch\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+ca.yorku.eecs.mack.demomultitouch.app-mergeDebugResources-4 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\EECS4443-Demos-main\Demo_Multitouch\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+ca.yorku.eecs.mack.demomultitouch.app-merged_res-5 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\EECS4443-Demos-main\Demo_Multitouch\app\build\intermediates\merged_res\debug
+ca.yorku.eecs.mack.demomultitouch.app-debug-6 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\EECS4443-Demos-main\Demo_Multitouch\app\src\debug\res
+ca.yorku.eecs.mack.demomultitouch.app-main-7 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\EECS4443-Demos-main\Demo_Multitouch\app\src\main\res

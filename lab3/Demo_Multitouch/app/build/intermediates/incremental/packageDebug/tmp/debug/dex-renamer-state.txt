@@ -1,0 +1,4 @@
+#Fri Mar 07 11:39:53 EST 2025
+base.0=D\:\\MSc - YorkU\\Winter 2025\\Mobile Interfaces - EECS 4443\\EECS4443-Demos-main\\Demo_Multitouch\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
