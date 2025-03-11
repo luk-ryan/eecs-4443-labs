@@ -15,5 +15,5 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
-    namespace 'ca.yorku.eecs.mack.demoscale'
+    namespace 'ca.yorku.eecs.mack.demoscale_96073'
 }

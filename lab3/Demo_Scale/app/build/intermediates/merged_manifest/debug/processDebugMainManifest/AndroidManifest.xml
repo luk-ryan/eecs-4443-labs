@@ -17,7 +17,7 @@
         android:testOnly="true"
         android:theme="@android:style/Theme.Holo" >
         <activity
-            android:name="ca.yorku.eecs.mack.demoscale.DemoScaleActivity"
+            android:name="ca.yorku.eecs.mack.demoscale_96073.DemoScale_96073Activity"
             android:configChanges="orientation"
             android:exported="true" >
             <intent-filter>

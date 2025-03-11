@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "ca.yorku.eecs.mack.demoscale.app-mergeDebugResources-2:/values/values.xml",
+            "outputFile": "ca.yorku.eecs.mack.demoscale_96073.app-mergeDebugResources-2:/values/values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ryanl\\IdeaProjects\\University_Projects\\EECS_4443\\eecs-4443-labs\\lab3\\Demo_Scale\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "/home/ryan-luk/IdeaProjects/UniversityProjects/EECS_4443/eecs-4443-labs/lab3/Demo_Scale/app/src/main/res/values/ic_launcher_background.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    }
+                },
+                {
+                    "source": "/home/ryan-luk/IdeaProjects/UniversityProjects/EECS_4443/eecs-4443-labs/lab3/Demo_Scale/app/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "4,3,6,5",
                         "startColumns": "4,4,4,4",
@@ -18,23 +28,6 @@
                         "startOffsets": "112,160,265,315",
                         "endColumns": "47,104,49,52",
                         "endOffsets": "155,260,310,363"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\ryanl\\IdeaProjects\\University_Projects\\EECS_4443\\eecs-4443-labs\\lab3\\Demo_Scale\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endColumns": "56",
-                        "endOffsets": "109"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "56",
-                        "endOffsets": "107"
                     }
                 }
             ]

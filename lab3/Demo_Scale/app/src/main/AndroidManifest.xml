@@ -9,7 +9,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name="ca.yorku.eecs.mack.demoscale.DemoScaleActivity"
+            android:name="ca.yorku.eecs.mack.demoscale_96073.DemoScale_96073Activity"
             android:configChanges="orientation"
             android:exported="true">
             <intent-filter>
