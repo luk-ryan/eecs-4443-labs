@@ -1,0 +1,106 @@
+[
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/drawable-ldpi_icon.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/drawable-ldpi/icon.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/drawable-ldpi_varihall.jpg.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/drawable-ldpi/varihall.jpg"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/drawable-hdpi_berg.jpg.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/drawable-hdpi/berg.jpg"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/layout_main.xml.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/layout/main.xml"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/drawable-hdpi_icon.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/drawable-hdpi/icon.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/drawable-hdpi_iconandroid.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/drawable-hdpi/iconandroid.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/drawable-mdpi_icon.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/drawable-mdpi/icon.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/drawable-hdpi_varihall.jpg.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/drawable-hdpi/varihall.jpg"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/drawable-mdpi_varihall.jpg.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/drawable-mdpi/varihall.jpg"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "ca.yorku.eecs.mack.demoscale_96073.app-debug-4:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "ca.yorku.eecs.mack.demoscale_96073.app-main-6:/mipmap-xhdpi/ic_launcher_round.png"
+    }
+]
