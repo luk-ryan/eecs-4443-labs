@@ -48,7 +48,7 @@ public class PaintPanel extends View
 
     // For double-tap
     private boolean doubleTap = false;
-    private boolean isLocked = false;
+    public boolean isLocked = false;
 
 
     // Provide three constructors to correspond to each of the three in View

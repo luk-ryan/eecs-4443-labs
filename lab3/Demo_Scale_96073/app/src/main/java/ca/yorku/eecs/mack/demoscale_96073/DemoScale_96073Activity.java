@@ -40,6 +40,7 @@ public class DemoScale_96073Activity extends Activity
         imagePanel.xPosition = 10;
         imagePanel.yPosition = 10;
         imagePanel.scaleFactor = 1f;
+        imagePanel.isLocked = false;
         imagePanel.invalidate();
     }
 }
