@@ -344,6 +344,7 @@ public class PaintPanel extends View
             return false;
         }
 
+        // Step 2: Double-Tap Gesture
         @Override
         public boolean onDoubleTap(MotionEvent e)
         {
@@ -353,6 +354,7 @@ public class PaintPanel extends View
             // Get the focus point of the double tap
             float focusX = e.getX();
             float focusY = e.getY();
+            float previousScaleFactor = scaleFactor;
 
             if (doubleTap)
             {
@@ -363,9 +365,10 @@ public class PaintPanel extends View
                 scaleFactor /= 3;
             }
 
-            // Ensure the scaling is centered on the double-tap point
-            xPosition = focusX - (focusX - xPosition) * 3;
-            yPosition = focusY - (focusY - yPosition) * 3;
+            float scaleRatio = scaleFactor / previousScaleFactor;
+
+            xPosition = focusX - (focusX - xPosition) * scaleRatio;
+            yPosition = focusY - (focusY - yPosition) * scaleRatio;
             invalidate();
             return true;
         }
