@@ -11,6 +11,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.widget.Toast;
 
 public class PaintPanel extends View
 {
@@ -45,8 +46,10 @@ public class PaintPanel extends View
     private float flingVelocity;
     private float flingAngle;
 
-    // For double-tap scaling
+    // For double-tap
     private boolean doubleTap = false;
+    private boolean isLocked = false;
+
 
     // Provide three constructors to correspond to each of the three in View
     public PaintPanel(Context context, AttributeSet attrs, int defStyle)
@@ -126,6 +129,7 @@ public class PaintPanel extends View
         // check for a fling gesture
         gestureDetector.onTouchEvent(me);
 
+        if (isLocked) return true; // Ignore if locked
         final int action = me.getAction();
         switch (action & MotionEvent.ACTION_MASK)
         {
@@ -288,6 +292,7 @@ public class PaintPanel extends View
         @Override
         public boolean onScaleBegin(ScaleGestureDetector detector)
         {
+            if (isLocked) return true; // Ignore if locked
             // ignore this scale gesture if the initial ACTION_DOWN was outside the image
             if (!imageSelected)
                 return true;
@@ -316,6 +321,7 @@ public class PaintPanel extends View
         @Override
         public boolean onScale(ScaleGestureDetector detector)
         {
+            if (isLocked) return true; // Ignore if locked
             // ignore this scale gesture if the initial ACTION_DOWN was outside the image
             if (!imageSelected)
                 return true;
@@ -348,7 +354,8 @@ public class PaintPanel extends View
         @Override
         public boolean onDoubleTap(MotionEvent e)
         {
-            // Scale the image up or down by a factor of 3 based on the current scale
+            if (isLocked) return true; // Ignore if locked
+
             doubleTap = !doubleTap;
 
             // Get the focus point of the double tap
@@ -373,6 +380,18 @@ public class PaintPanel extends View
             return true;
         }
 
+        // Step 3: Original Feature (Locks image in place on long press)
+        @Override
+        public void onLongPress(MotionEvent e) {
+            isLocked = !isLocked; // Toggle lock state
+
+            String message = isLocked ? "Image Locked" : "Image Unlocked";
+            Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+
+            invalidate();
+        }
+
+
         /*
          * onFling - This method is executed when a fling or flick gesture is detected (that began
          * on the image). The goal is to determine the fling velocity and the fling direction
@@ -382,6 +401,7 @@ public class PaintPanel extends View
         @Override
         public boolean onFling(MotionEvent me1, MotionEvent me2, float velocityX, float velocityY)
         {
+            if (isLocked) return true; // Ignore if locked
             // ignore this fling gesture if the initial ACTION_DOWN was outside the image
             if (!imageSelected)
                 return true;
