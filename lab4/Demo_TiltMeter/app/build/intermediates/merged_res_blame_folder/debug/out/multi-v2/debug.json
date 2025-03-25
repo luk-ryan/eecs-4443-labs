@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "ca.yorku.eecs.mack.demotiltmeter.app-merged_res-5:/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\MSc - YorkU\\Winter 2025\\Mobile Interfaces - EECS 4443\\Lab 4\\CORRECTED VER - for eclass\\Demo_TiltMeter\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "56",
+                        "endOffsets": "109"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    }
+                },
+                {
+                    "source": "D:\\MSc - YorkU\\Winter 2025\\Mobile Interfaces - EECS 4443\\Lab 4\\CORRECTED VER - for eclass\\Demo_TiltMeter\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "3,8,7,5,6,9,10,11,4",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "59,352,307,171,241,401,460,538,112",
+                        "endColumns": "51,47,43,68,64,57,76,64,57",
+                        "endOffsets": "106,395,346,235,301,454,532,598,165"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "112,164,212,256,325,390,448,525,590",
+                        "endColumns": "51,47,43,68,64,57,76,64,57",
+                        "endOffsets": "159,207,251,320,385,443,520,585,643"
+                    }
+                }
+            ]
+        }
+    ]
+}

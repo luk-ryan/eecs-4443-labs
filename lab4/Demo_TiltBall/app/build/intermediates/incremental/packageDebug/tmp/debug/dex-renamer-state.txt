@@ -1,0 +1,7 @@
+#Tue Mar 25 15:40:30 EDT 2025
+base.0=C\:\\Users\\ryanl\\IdeaProjects\\University_Projects\\EECS_4443\\eecs-4443-labs\\lab4\\Demo_TiltBall\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.1=C\:\\Users\\ryanl\\IdeaProjects\\University_Projects\\EECS_4443\\eecs-4443-labs\\lab4\\Demo_TiltBall\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+path.0=0/classes.dex
+path.1=2/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex

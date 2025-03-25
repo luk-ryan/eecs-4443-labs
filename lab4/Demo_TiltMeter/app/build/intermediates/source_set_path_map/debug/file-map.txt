@@ -1,0 +1,8 @@
+ca.yorku.eecs.mack.demotiltmeter.app-pngs-0 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\Lab 4\CORRECTED VER - for eclass\Demo_TiltMeter\app\build\generated\res\pngs\debug
+ca.yorku.eecs.mack.demotiltmeter.app-resValues-1 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\Lab 4\CORRECTED VER - for eclass\Demo_TiltMeter\app\build\generated\res\resValues\debug
+ca.yorku.eecs.mack.demotiltmeter.app-rs-2 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\Lab 4\CORRECTED VER - for eclass\Demo_TiltMeter\app\build\generated\res\rs\debug
+ca.yorku.eecs.mack.demotiltmeter.app-mergeDebugResources-3 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\Lab 4\CORRECTED VER - for eclass\Demo_TiltMeter\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+ca.yorku.eecs.mack.demotiltmeter.app-mergeDebugResources-4 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\Lab 4\CORRECTED VER - for eclass\Demo_TiltMeter\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+ca.yorku.eecs.mack.demotiltmeter.app-merged_res-5 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\Lab 4\CORRECTED VER - for eclass\Demo_TiltMeter\app\build\intermediates\merged_res\debug
+ca.yorku.eecs.mack.demotiltmeter.app-debug-6 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\Lab 4\CORRECTED VER - for eclass\Demo_TiltMeter\app\src\debug\res
+ca.yorku.eecs.mack.demotiltmeter.app-main-7 D:\MSc - YorkU\Winter 2025\Mobile Interfaces - EECS 4443\Lab 4\CORRECTED VER - for eclass\Demo_TiltMeter\app\src\main\res

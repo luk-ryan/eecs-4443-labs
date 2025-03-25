@@ -1,0 +1,7 @@
+ca.yorku.eecs.mack.demotiltball.app-pngs-0 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\build\generated\res\pngs\debug
+ca.yorku.eecs.mack.demotiltball.app-resValues-1 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\build\generated\res\resValues\debug
+ca.yorku.eecs.mack.demotiltball.app-mergeDebugResources-2 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+ca.yorku.eecs.mack.demotiltball.app-mergeDebugResources-3 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+ca.yorku.eecs.mack.demotiltball.app-debug-4 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\build\intermediates\merged_res\debug\mergeDebugResources
+ca.yorku.eecs.mack.demotiltball.app-debug-5 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\debug\res
+ca.yorku.eecs.mack.demotiltball.app-main-6 C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\res

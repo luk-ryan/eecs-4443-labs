@@ -1,0 +1,58 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="ca.yorku.eecs.mack.demotiltball"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="13"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission android:name="android.permission.VIBRATE" >
+11-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:6:5-7:23
+11-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:6:22-63
+12    </uses-permission>
+13
+14    <application
+14-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:9:5-27:19
+15        android:allowBackup="false"
+15-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:10:9-36
+16        android:debuggable="true"
+17        android:extractNativeLibs="true"
+18        android:icon="@mipmap/ic_launcher"
+18-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:11:9-43
+19        android:label="@string/app_name"
+19-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:12:9-41
+20        android:testOnly="true"
+21        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+21-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:13:9-67
+22        <activity
+22-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:14:9-22:20
+23            android:name="ca.yorku.eecs.mack.demotiltball.DemoTiltBallSetup"
+23-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:15:13-77
+24            android:exported="true" >
+24-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:16:13-36
+25            <intent-filter>
+25-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:17:13-21:29
+26                <action android:name="android.intent.action.MAIN" />
+26-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:18:17-69
+26-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:18:25-66
+27                <action android:name="android.intent.action.VIEW" />
+27-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:19:17-69
+27-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:19:25-66
+28
+29                <category android:name="android.intent.category.LAUNCHER" />
+29-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:20:17-77
+29-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:20:27-74
+30            </intent-filter>
+31        </activity>
+32        <activity
+32-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:23:9-26:20
+33            android:name="ca.yorku.eecs.mack.demotiltball.DemoTiltBallActivity"
+33-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:24:13-80
+34            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+34-->C:\Users\ryanl\IdeaProjects\University_Projects\EECS_4443\eecs-4443-labs\lab4\Demo_TiltBall\app\src\main\AndroidManifest.xml:25:13-71
+35        </activity>
+36    </application>
+37
+38</manifest>
