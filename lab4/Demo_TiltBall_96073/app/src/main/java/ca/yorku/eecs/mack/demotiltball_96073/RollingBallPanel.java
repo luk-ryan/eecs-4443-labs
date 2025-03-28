@@ -1,6 +1,7 @@
 package ca.yorku.eecs.mack.demotiltball_96073;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -11,10 +12,15 @@ import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.view.View;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class RollingBallPanel extends View
+
+
 {
+    private long gameStartTime;
+    private boolean gameStarted = false;
     final static float DEGREES_TO_RADIANS = 0.0174532925f;
 
     // the ball diameter will be min(width, height) / this_value
@@ -33,6 +39,9 @@ public class RollingBallPanel extends View
     final static float PATH_WIDTH_MEDIUM = 4f; // ... x ball diameter
     final static float PATH_WIDTH_WIDE = 8f; // ... x ball diameter
 
+    private boolean hasReachedOppositeSide = false;
+
+
     float radiusOuter, radiusInner;
 
     Bitmap ball, decodedBallBitmap;
@@ -48,8 +57,34 @@ public class RollingBallPanel extends View
     Vibrator vib;
     int wallHits;
 
+
+    int lapCount = 0; // Stores the number of completed laps
+    int totalLaps = 2; // Default value, will be set from setup
+    boolean crossingStartLine = false; // To track when the ball crosses the lap line
+
+    // Performance tracking variables
+    long lapStartTime; // To track lap times
+    ArrayList<Long> lapTimes = new ArrayList<>(); // Store lap times
+
+    float timeInPath = 0; // Time spent inside the path
+    float totalTime = 0; // Total game time
+    boolean ballInsidePath = true; // Track if the ball is inside the path
+    private static final int REFRESH_INTERVAL = 20;  // 20 milliseconds for refresh rate
+
+    private String resultText; // Declare a string to store the result message
+
+
+
+
+
+
     float xBall, yBall; // top-left of the ball (for painting)
     float xBallCenter, yBallCenter; // center of the ball
+
+    float lapLineX; // X-coordinate of the lap line
+    float lapLineY; // Y-coordinate of the lap line (for horizontal paths)
+    boolean isHorizontalPath = false; // Flag to track path direction
+
 
     float pitch, roll;
     float tiltAngle, tiltMagnitude;
@@ -139,6 +174,12 @@ public class RollingBallPanel extends View
         width = this.getWidth();
         height = this.getHeight();
 
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus && !gameStarted) {
+            gameStartTime = System.currentTimeMillis();
+            gameStarted = true;
+        }
+
         // the ball diameter is nominally 1/30th the smaller of the view's width or height
         ballDiameter = width < height ? (int)(width / BALL_DIAMETER_ADJUST_FACTOR)
                 : (int)(height / BALL_DIAMETER_ADJUST_FACTOR);
@@ -214,6 +255,9 @@ public class RollingBallPanel extends View
         tiltAngle = tiltAngleArg;
         tiltMagnitude = tiltMagnitudeArg;
 
+        float previousXBallCenter=xBallCenter;
+        float previousYBallCenter=yBallCenter;
+
         // get current time and delta since last onDraw
         now = System.nanoTime();
         dT = (now - lastT) / 1000000000f; // seconds
@@ -222,6 +266,11 @@ public class RollingBallPanel extends View
         // don't allow tiltMagnitude to exceed 45 degrees
         final float MAX_MAGNITUDE = 45f;
         tiltMagnitude = tiltMagnitude > MAX_MAGNITUDE ? MAX_MAGNITUDE : tiltMagnitude;
+
+        // Start timing when the first lap begins
+        if (lapCount == 0 && ballInsidePath) {
+            lapStartTime = System.currentTimeMillis();
+        }
 
         // This is the only code that distinguishes velocity-control from position-control
         if (orderOfControl.equals("Velocity")) // velocity control
@@ -265,9 +314,72 @@ public class RollingBallPanel extends View
         xBallCenter = xBall + ballDiameter / 2f;
         yBallCenter = yBall + ballDiameter / 2f;
 
+
+        // Check if ball is inside the path
+        ballInsidePath = isBallInsidePath();
+
+
+        // Check if ball has reached opposite side of path (anti-cheating measure)
+        if (pathType == PATH_TYPE_CIRCLE) {
+            // For circle, check if ball passed right side (xCenter + radiusOuter)
+            if (xBallCenter > xCenter + radiusOuter - ballDiameter/2) {
+                hasReachedOppositeSide = true;
+            }
+        } else if (pathType == PATH_TYPE_SQUARE) {
+            // For square, check if ball passed bottom side (yCenter + radiusOuter)
+            if (yBallCenter > yCenter + radiusOuter - ballDiameter/2) {
+                hasReachedOppositeSide = true;
+            }
+        }
+
+
+
+        // Track lap crossing
+        if (pathType == PATH_TYPE_CIRCLE) {
+            // Circular path: detect crossing left vertical line moving right
+            boolean wasRight = (previousXBallCenter > xCenter - radiusOuter);
+            boolean isLeft = (xBallCenter >= xCenter - radiusOuter);
+
+            if (wasRight && isLeft &&
+                    yBallCenter > yCenter - ballDiameter &&
+                    yBallCenter < yCenter + ballDiameter) {
+                if (hasReachedOppositeSide || lapCount == 0) {
+                    handleLapCrossing();
+                    hasReachedOppositeSide = false;
+                }
+            }
+        }
+
+
+
+        else if (pathType == PATH_TYPE_SQUARE) {
+            // Square path: detect crossing top horizontal line moving down
+            boolean wasAbove = (previousYBallCenter < yCenter - radiusOuter);
+            boolean isBelow = (yBallCenter >= yCenter - radiusOuter);
+
+            if (wasAbove && isBelow &&
+                    xBallCenter > xCenter - radiusOuter &&
+                    xBallCenter < xCenter + radiusOuter) {
+                if (hasReachedOppositeSide || lapCount == 0) {
+                    handleLapCrossing();
+                    hasReachedOppositeSide = false;
+                }
+            }
+        }
+
+
+        // Update time tracking (convert to milliseconds)
+        if (ballInsidePath) {
+            timeInPath += dT * 1000;
+        }
+        totalTime += dT * 1000;
+
+
+
+
         // if ball touches wall, vibrate and increment wallHits count
         // NOTE: We also use a boolean touchFlag so we only vibrate on the first touch
-        if (ballTouchingLine() && !touchFlag)
+        if (ballTouchingLine() && ballTouchingLine() && !touchFlag)
         {
             touchFlag = true; // the ball has *just* touched the line: set the touchFlag
             vib.vibrate(50); // 50 ms vibrotactile pulse
@@ -276,14 +388,110 @@ public class RollingBallPanel extends View
         } else if (!ballTouchingLine() && touchFlag)
             touchFlag = false; // the ball is no longer touching the line: clear the touchFlag
 
+
+
+
+        // After all laps are complete
+        if (lapCount >= totalLaps) {
+            long totalLapTime = 0;
+            for (long lapTime : lapTimes) {
+                totalLapTime += lapTime; // Calculate total lap time
+            }
+            float meanLapTime = totalLapTime / lapTimes.size(); // Mean lap time (in ms)
+
+            // Calculate in-path time percentage
+            float accuracy = (timeInPath / totalTime) * 100;
+
+            // Store the results as a string message
+            resultText = "Laps: " + totalLaps +
+                    "\nAvg Lap Time: " + meanLapTime + " ms" +
+                    "\nWall Hits: " + wallHits +
+                    "\nPath Accuracy: " + String.format("%.2f", accuracy) + "%";
+
+            // Pass the results to a new Activity for display
+            Intent resultsIntent = new Intent(getContext(), ResultsActivity.class);
+            resultsIntent.putExtra("laps", totalLaps);
+            resultsIntent.putExtra("meanLapTime", meanLapTime);
+            resultsIntent.putExtra("wallHits", wallHits);
+            resultsIntent.putExtra("accuracy", accuracy);
+            getContext().startActivity(resultsIntent); // Start the results activity
+        }
+
+
+
+
         invalidate(); // force onDraw to redraw the screen with the ball in its new position
     }
+
+    private void sendResultsToActivity() {
+        // Calculate the total lap time and accuracy
+        long totalLapTime = 0;
+        for (long lapTime : lapTimes) {
+            totalLapTime += lapTime;
+        }
+        float meanLapTime = totalLapTime / lapTimes.size(); // Mean lap time (in ms)
+
+        // Calculate in-path time percentage
+        float accuracy = (timeInPath / totalTime) * 100;
+
+        // Store the results as a string message
+        String resultText = "Laps: " + totalLaps +
+                "\nAvg Lap Time: " + meanLapTime + " ms" +
+                "\nWall Hits: " + wallHits +
+                "\nPath Accuracy: " + String.format("%.2f", accuracy) + "%";
+
+        // Pass the results to a new Activity for display
+        Intent resultsIntent = new Intent(getContext(), ResultsActivity.class);
+        resultsIntent.putExtra("laps", totalLaps);
+        resultsIntent.putExtra("meanLapTime", meanLapTime);
+        resultsIntent.putExtra("wallHits", wallHits);
+        resultsIntent.putExtra("accuracy", accuracy);
+        getContext().startActivity(resultsIntent);  // Start the results activity
+    }
+
+    private boolean isBallInsidePath() {
+        if (pathType == PATH_TYPE_CIRCLE) {
+            float distanceFromCenter = (float)Math.hypot(xBallCenter - xCenter, yBallCenter - yCenter);
+            return distanceFromCenter > radiusInner && distanceFromCenter < radiusOuter;
+        } else if (pathType == PATH_TYPE_SQUARE) {
+            return xBallCenter > innerRectangle.left && xBallCenter < innerRectangle.right &&
+                    yBallCenter > innerRectangle.top && yBallCenter < innerRectangle.bottom &&
+                    (xBallCenter < outerRectangle.left || xBallCenter > outerRectangle.right ||
+                            yBallCenter < outerRectangle.top || yBallCenter > outerRectangle.bottom);
+        }
+        return false;
+    }
+
+    private void handleLapCrossing() {
+        if (!crossingStartLine) {
+            // Start of new lap
+            crossingStartLine = true;
+            lapStartTime = System.currentTimeMillis();
+            vib.vibrate(100); // Longer vibration for lap start
+        } else {
+            // Completion of lap
+            crossingStartLine = false;
+            lapCount++;
+            long lapTime = System.currentTimeMillis() - lapStartTime;
+            lapTimes.add(lapTime);
+            vib.vibrate(new long[]{0, 100, 50, 100}, -1); // Double vibration for lap completion
+
+            if (lapCount >= totalLaps) {
+                sendResultsToActivity();
+            }
+        }
+    }
+
+
+
+
 
     protected void onDraw(Canvas canvas)
     {
         // check if view is ready for drawing
         if (updateY == null)
             return;
+
 
         // draw the paths
         if (pathType == PATH_TYPE_SQUARE)
@@ -306,8 +514,60 @@ public class RollingBallPanel extends View
             canvas.drawOval(innerRectangle, linePaint);
         }
 
+        // Draw the lap line (start/finish line)
+        Paint lapLinePaint = new Paint();
+        lapLinePaint.setColor(Color.RED); // Red color for visibility
+        lapLinePaint.setStrokeWidth(5); // Line thickness
+
+        // Draw lap line from the outer edge towards the center
+        canvas.drawLine(xCenter - radiusOuter, yCenter, xCenter - radiusInner, yCenter, lapLinePaint);
+
+
+
+
+        // Draw movement direction arrow (outside the circular track)
+        Paint arrowPaint = new Paint();
+        arrowPaint.setColor(Color.RED);
+        arrowPaint.setStrokeWidth(8);
+        arrowPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+
+        float arrowSize = 30; // Size of arrowhead
+        float arrowX = xCenter - radiusOuter - 20; // Move the arrow slightly outside the track
+        float arrowY = yCenter; // Centered on the Y-axis
+
+        // Draw arrow stem (short vertical line)
+        canvas.drawLine(arrowX, arrowY - 20, arrowX, arrowY + 20, arrowPaint);
+
+        // Draw arrowhead (pointing downward)
+        canvas.drawLine(arrowX - arrowSize / 2, arrowY + 10, arrowX, arrowY + 20, arrowPaint);
+        canvas.drawLine(arrowX + arrowSize / 2, arrowY + 10, arrowX, arrowY + 20, arrowPaint);
+
+        // Timer display (move to the right side of the screen)
+        if (gameStarted) {
+            long elapsedTime = System.currentTimeMillis() - gameStartTime;
+            long seconds = (elapsedTime / 1000) % 60;
+            long minutes = (elapsedTime / 60000) % 60;
+            String time = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
+
+            // Set the position for the timer (right-aligned)
+            Paint timerPaint = new Paint();
+            timerPaint.setColor(Color.BLACK);
+            timerPaint.setTextSize(40);  // Smaller text size for better fit
+            canvas.drawText("Time: " + time, width - 300, 60, timerPaint);
+        }
+
+
+
+
+
         // draw label
         canvas.drawText("Demo_TiltBall", 6f, labelTextSize, labelPaint);
+
+
+
+        // Display Lap Count
+        canvas.drawText("Laps: " + lapCount + " / " + totalLaps, 50, 100, statsPaint);
+
 
         // draw stats (pitch, roll, tilt angle, tilt magnitude)
         if (pathType == PATH_TYPE_SQUARE || pathType == PATH_TYPE_CIRCLE)
@@ -329,7 +589,8 @@ public class RollingBallPanel extends View
     /*
      * Configure the rolling ball panel according to setup parameters
      */
-    public void configure(String pathMode, String pathWidthArg, int gainArg, String orderOfControlArg)
+
+    public void configure(String pathMode, String pathWidthArg, int gainArg, String orderOfControlArg, int totalLapsArg)
     {
         // square vs. circle
         if (pathMode.equals("Square"))
@@ -349,6 +610,23 @@ public class RollingBallPanel extends View
 
         gain = gainArg;
         orderOfControl = orderOfControlArg;
+        this.totalLaps = totalLapsArg; // Store the total laps
+
+        // Set lap line position based on path type
+        if (pathType == PATH_TYPE_CIRCLE) {
+            lapLineX = xCenter - radiusOuter; // Lap line at left edge of the circle
+            isHorizontalPath = false; // Vertical movement
+        } else if (pathType == PATH_TYPE_SQUARE) {
+            lapLineY = yCenter - radiusOuter; // Lap line at top edge of square
+            isHorizontalPath = true; // Horizontal movement
+        }
+
+
+
+
+
+
+
     }
 
     // returns true if the ball is touching (i.e., overlapping) the line of the inner or outer path border
@@ -378,6 +656,13 @@ public class RollingBallPanel extends View
             if (Math.abs(ballDistance - radiusInner) < (ballDiameter / 2f))
                 return true; // touching inner circular border
         }
+
+
         return false;
     }
+
+
+
+
+
 }

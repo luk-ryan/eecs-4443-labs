@@ -69,8 +69,8 @@ public class DemoTiltBall_96073Activity extends Activity implements SensorEventL
     {
         super.onCreate(savedInstanceState);
 
-        Log.i(MYDEBUG, "Got here! (DemoTiltBall_96073Activity - onCreate)");
-        
+        Log.i(MYDEBUG, "Got here! (DemoTiltBall85287Activity - onCreate)");
+
         setContentView(R.layout.main);
 
         // get parameters selected by user from setup dialog
@@ -79,6 +79,14 @@ public class DemoTiltBall_96073Activity extends Activity implements SensorEventL
         gain = b.getInt("gain");
         pathType = b.getString("pathType");
         pathWidth = b.getString("pathWidth");
+
+        int totalLaps = b.getInt("numLaps", 2); // Default to 2 laps if not set
+
+
+        // Pass parameters to the rolling ball panel
+        rb = (RollingBallPanel)findViewById(R.id.rollingballpanel);
+        rb.configure(pathType, pathWidth, gain, orderOfControl, totalLaps);
+
 
         // set alpha for low-pass filter (based on sampling rate and order of control)
         if (orderOfControl.equals("Velocity")) // velocity control
@@ -98,7 +106,7 @@ public class DemoTiltBall_96073Activity extends Activity implements SensorEventL
 
         // configure rolling ball panel, as per setup parameters
         rb = (RollingBallPanel)findViewById(R.id.rollingballpanel);
-        rb.configure(pathType, pathWidth, gain, orderOfControl);
+        rb.configure(pathType, pathWidth, gain, orderOfControl, totalLaps);
 
         // get sensors
         sm = (SensorManager)getSystemService(SENSOR_SERVICE);
@@ -242,13 +250,13 @@ public class DemoTiltBall_96073Activity extends Activity implements SensorEventL
             // ---------------------------------------------------------------------------------------------
             case ACCELEROMETER_ONLY:
 
-				/*
+                /*
                  * Use this mode if the device has an accelerometer but no magnetic field sensor and
-				 * no orientation sensor (e.g., HTC Desire C, Asus MeMOPad). This algorithm doesn't
-				 * work quite as well, unfortunately. See...
-				 * 
-				 * http://www.hobbytronics.co.uk/accelerometer-info
-				 */
+                 * no orientation sensor (e.g., HTC Desire C, Asus MeMOPad). This algorithm doesn't
+                 * work quite as well, unfortunately. See...
+                 *
+                 * http://www.hobbytronics.co.uk/accelerometer-info
+                 */
 
                 // smooth the sensor values using a low-pass filter
                 if (se.sensor.getType() == Sensor.TYPE_ACCELEROMETER)
